@@ -1,6 +1,15 @@
 import { toClean } from 'number-string'
 import { ToMoneyConfig } from './interfaces'
 
+const defaultConfig: ToMoneyConfig = {
+  decimalMark: '.',
+  thousandSeparator: '',
+  precision: [2, 2],
+  symbol: '',
+  symbolBehind: false,
+  useParens: true,
+}
+
 export function toMoney(
   value: number,
   {
@@ -10,7 +19,7 @@ export function toMoney(
     symbol = '',
     symbolBehind = false,
     useParens = true,
-  }: ToMoneyConfig
+  }: ToMoneyConfig = defaultConfig
 ): string {
   if (precision.length !== 2)
     throw new Error('`precision` property must got two elements')
