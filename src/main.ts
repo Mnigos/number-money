@@ -18,7 +18,7 @@ export function toMoney(
     precision = [2, 2],
     symbol = '',
     symbolBehind = false,
-    useParens = true,
+    useParens = false,
   }: ToMoneyConfig = defaultConfig
 ): string {
   if (precision.length !== 2)
