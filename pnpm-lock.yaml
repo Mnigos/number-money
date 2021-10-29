@@ -20,6 +20,7 @@ specifiers:
   lint-staged: ^11.2.6
   nodemon: ^2.0.14
   number-string: ^1.1.6
+  prettier: ^2.4.1
   ts-jest: ^27.0.7
   typescript: ^4.4.4
 
@@ -38,13 +39,14 @@ devDependencies:
   eslint-plugin-import: 2.25.2_eslint@8.1.0
   eslint-plugin-import-helpers: 1.1.0_eslint@8.1.0
   eslint-plugin-jest: 25.2.2_d67d54587a3e4bbc4421f6651ef828ee
-  eslint-plugin-prettier: 4.0.0_559a9556effbe94838bd29eaa9fdc6b8
+  eslint-plugin-prettier: 4.0.0_850528f9ec3c0797b9b19a94a36b5ba3
   eslint-plugin-sonarjs: 0.10.0_eslint@8.1.0
   eslint-plugin-unicorn: 37.0.1_eslint@8.1.0
   husky: 7.0.4
   jest: 27.3.1
   lint-staged: 11.2.6
   nodemon: 2.0.14
+  prettier: 2.4.1
   ts-jest: 27.0.7_2c4ca6574207836d1023f54689cc81ac
   typescript: 4.4.4
 
@@ -2022,7 +2024,7 @@ packages:
       - typescript
     dev: true
 
-  /eslint-plugin-prettier/4.0.0_559a9556effbe94838bd29eaa9fdc6b8:
+  /eslint-plugin-prettier/4.0.0_850528f9ec3c0797b9b19a94a36b5ba3:
     resolution: {integrity: sha512-98MqmCJ7vJodoQK359bqQWaxOE0CS8paAz/GgjaZLyex4TTk3g9HugoO89EqWCrFiOqn9EVvcoo7gZzONCWVwQ==}
     engines: {node: '>=6.0.0'}
     peerDependencies:
@@ -2035,6 +2037,7 @@ packages:
     dependencies:
       eslint: 8.1.0
       eslint-config-prettier: 8.3.0_eslint@8.1.0
+      prettier: 2.4.1
       prettier-linter-helpers: 1.0.0
     dev: true
 
@@ -4148,6 +4151,12 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       fast-diff: 1.2.0
+    dev: true
+
+  /prettier/2.4.1:
+    resolution: {integrity: sha512-9fbDAXSBcc6Bs1mZrDYb3XKzDLm4EXXL9sC1LqKP5rZkT6KRr/rf9amVUcODVXgguK/isJz0d0hP72WeaKWsvA==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: true
 
   /pretty-format/27.3.1:
