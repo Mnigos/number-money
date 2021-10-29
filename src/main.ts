@@ -7,7 +7,7 @@ const defaultConfig: ToMoneyConfig = {
   precision: [2, 2],
   symbol: '',
   symbolBehind: false,
-  useParens: true,
+  useParens: false,
 }
 
 export function toMoney(
