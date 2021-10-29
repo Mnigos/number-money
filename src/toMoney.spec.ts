@@ -1,15 +1,26 @@
 import { toMoney } from './main'
-import { ToMoneyConfig } from './interfaces'
 
 describe('toMoney function', () => {
-  it('Should return formatted number', () => {
+  it('should return formatted number', () => {
+    expect.hasAssertions()
     const value = 1.23
     const formattedValue = toMoney(value)
 
-    expect(formattedValue).toEqual(`${value}`)
+    expect(formattedValue).toStrictEqual(`${value}`)
   })
 
-  it('Should throw error with precision', () => {
+  it('should return value with 14 decimal places', () => {
+    expect.hasAssertions()
+    const value = 1.123_456_789_123_34
+    const formattedValue = toMoney(value, {
+      precision: [14, 14],
+    })
+
+    expect(formattedValue).toStrictEqual(`${value}`)
+  })
+
+  it('should throw error with precision', () => {
+    expect.hasAssertions()
     const value = 1.23
     const formattedValue = () =>
       toMoney(value, {
@@ -17,63 +28,71 @@ describe('toMoney function', () => {
       })
 
     expect(formattedValue).toThrow(
-      Error('`precision` property must got two elements')
+      new Error('`precision` property must got two elements')
     )
   })
 
-  it('Should return NaN value', () => {
-    const value = NaN
+  it('should return NaN value', () => {
+    expect.hasAssertions()
+    const value = Number.NaN
     const formattedValue = toMoney(value)
 
-    expect(formattedValue).toEqual('NaN')
+    expect(formattedValue).toBe('NaN')
   })
 
-  it('Should return Infinity value', () => {
+  it('should return Infinity value', () => {
+    expect.hasAssertions()
     const value = Number.POSITIVE_INFINITY
     const formattedValue = toMoney(value)
 
-    expect(formattedValue).toEqual('Infinity')
+    expect(formattedValue).toBe('Infinity')
   })
 
-  it('Should return negative Inifnity value', () => {
+  it('should return negative Inifnity value', () => {
+    expect.hasAssertions()
     const value = Number.NEGATIVE_INFINITY
     const formattedValue = toMoney(value)
 
-    expect(formattedValue).toEqual('-Infinity')
+    expect(formattedValue).toBe('-Infinity')
   })
 
-  it('Should return negative Infinity value with Parens', () => {
+  it('should return negative Infinity value with Parens', () => {
+    expect.hasAssertions()
     const value = Number.NEGATIVE_INFINITY
     const formattedValue = toMoney(value, { useParens: true })
 
-    expect(formattedValue).toEqual('(Infinity)')
+    expect(formattedValue).toBe('(Infinity)')
   })
 
-  it('Should return value with symbol', () => {
+  it('should return value with symbol', () => {
+    expect.hasAssertions()
     const value = 1.23
     const formattedValue = toMoney(value, { symbol: '$' })
 
-    expect(formattedValue).toEqual(`$${value}`)
+    expect(formattedValue).toStrictEqual(`$${value}`)
   })
 
-  it('Should return value with symbol behind', () => {
+  it('should return value with symbol behind', () => {
+    expect.hasAssertions()
     const value = 1.23
     const formattedValue = toMoney(value, { symbol: '$', symbolBehind: true })
 
-    expect(formattedValue).toEqual(`${value} $`)
+    expect(formattedValue).toStrictEqual(`${value} $`)
   })
 
-  it('Should return negative value', () => {
+  it('should return negative value', () => {
+    expect.hasAssertions()
     const value = -1.23
     const formattedValue = toMoney(value)
 
-    expect(formattedValue).toEqual(`${value}`)
+    expect(formattedValue).toStrictEqual(`${value}`)
   })
 
-  it('Should return value with parens', () => {
+  it('should return value with parens', () => {
+    expect.hasAssertions()
     const value = -1.23
     const formattedValue = toMoney(value, { useParens: true })
 
-    expect(formattedValue).toEqual(`(${Math.abs(value)})`)
+    expect(formattedValue).toStrictEqual(`(${Math.abs(value)})`)
   })
 })
