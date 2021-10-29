@@ -1,0 +1,53 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "jest/globals": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 11
+  },
+  "plugins": [
+    "prettier",
+    "jest",
+    "eslint-plugin-import-helpers",
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "prettier",
+    "plugin:sonarjs/recommended",
+    "plugin:jest/all",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:unicorn/recommended"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["./src"],
+        "extensions": [".ts"]
+      }
+    }
+  },
+  "rules": {
+    "prettier/prettier": "warn",
+    "prefer-const": "warn",
+    "no-console": "off",
+    "unicorn/no-abusive-eslint-disable": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "unicorn/prevent-abbreviations": "off",
+    "unicorn/filename-case": [
+      "warn",
+      {
+        "cases": {
+          "pascalCase": true,
+          "kebabCase": true,
+          "camelCase": true
+        }
+      }
+    ],
+    "import-helpers/order-imports": "off"
+  }
+}

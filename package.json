@@ -1,0 +1,50 @@
+{
+  "name": "number-money",
+  "version": "0.1.0",
+  "description": "format number to money",
+  "author": "Mnigos <makowskiigor@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "number",
+    "money",
+    "format"
+  ],
+  "main": "src/main.ts",
+  "scripts": {
+    "dev": "nodemon",
+    "prepare": "husky install",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "lint:fix": "npm run lint -- --fix",
+    "type-check": "tsc",
+    "test": "jest --Pa",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": "eslint"
+  },
+  "dependencies": {
+    "number-string": "^1.1.6"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.2.1",
+    "@commitlint/config-conventional": "^13.2.0",
+    "@types/node": "^16.11.6",
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
+    "eslint": "^8.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-import-helpers": "^1.1.0",
+    "eslint-plugin-jest": "^25.2.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-sonarjs": "^0.10.0",
+    "eslint-plugin-unicorn": "^37.0.1",
+    "husky": "^7.0.4",
+    "jest": "^27.3.1",
+    "lint-staged": "^11.2.6",
+    "nodemon": "^2.0.14",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.4.4"
+  }
+}

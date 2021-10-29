@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@App/*": ["src/*"],
+      "@Shared/*": ["src/Shared/*"]
+    }
+  },
+  "moduleNameMapper": {
+    "@App/(.*)": "<rootDir>/src/$1",
+    "@Shared/(.*)": "<rootDir>/src/Shared/$1"
+  },
+  "exclude": ["node_modules"],
+  "include": ["**/*.ts", "**/*.tsx"]
+}
