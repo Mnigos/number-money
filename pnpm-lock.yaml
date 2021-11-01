@@ -19,13 +19,9 @@ specifiers:
   jest: ^27.3.1
   lint-staged: ^11.2.6
   nodemon: ^2.0.14
-  number-string: ^1.1.6
   prettier: ^2.4.1
   ts-jest: ^27.0.7
   typescript: ^4.4.4
-
-dependencies:
-  number-string: 1.1.6
 
 devDependencies:
   '@commitlint/cli': 13.2.1
@@ -3892,10 +3888,6 @@ packages:
     dependencies:
       path-key: 3.1.1
     dev: true
-
-  /number-string/1.1.6:
-    resolution: {integrity: sha512-OduQ8T8v3OSvGOeJdNabIfLPuA39tyRTyheCCXpmGx/N2ODipzTz/32uGQU+c4abH79jK+g2usqNjWblAdSXwA==}
-    dev: false
 
   /nwsapi/2.2.0:
     resolution: {integrity: sha512-h2AatdwYH+JHiZpv7pt/gSX1XoRGb7L/qSIeuqA6GwYoF9w1vP1cw42TO0aI2pNyshRK5893hNSl+1//vHK7hQ==}
