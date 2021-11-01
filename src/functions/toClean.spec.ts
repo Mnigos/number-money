@@ -53,7 +53,6 @@ describe('toClean function', () => {
     const value = 1.000_000_000_000_00
     const formattedValue = toClean(value, { precision: [14, 14] })
 
-    // eslint-disable-next-line unicorn/no-zero-fractions
     expect(formattedValue).toStrictEqual(`1.00000000000000`)
   })
 
