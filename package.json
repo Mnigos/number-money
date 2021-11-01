@@ -1,6 +1,6 @@
 {
   "name": "number-money",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "format number to money",
   "author": "Mnigos <makowskiigor@gmail.com>",
   "license": "MIT",
@@ -10,8 +10,15 @@
     "format"
   ],
   "main": "src/main.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mnigos/number-money.git"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/",
+    "access": "public"
+  },
   "scripts": {
-    "dev": "nodemon",
     "prepare": "husky install",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "lint:fix": "npm run lint -- --fix",
