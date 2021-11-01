@@ -9,9 +9,7 @@ describe('toMoney function', () => {
     expect(formattedValue).toStrictEqual(`${value}`)
   })
 
-  // @TODO Implement own toClean function
-  // eslint-disable-next-line jest/no-disabled-tests
-  it.skip('should return value with 14 decimal places', () => {
+  it('should return value with 14 decimal places', () => {
     expect.hasAssertions()
     const value = 1.123_456_789_123_34
     const formattedValue = toMoney(value, {

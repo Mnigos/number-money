@@ -1,4 +1,4 @@
-import { toClean } from 'number-string'
+import { toClean } from './toClean'
 import { ToMoneyConfig } from '../interfaces'
 
 const defaultConfig: ToMoneyConfig = {
@@ -35,8 +35,7 @@ export function toMoney(
   const cleanedValue = toClean(valueAbs, {
     decimalMark,
     thousandSeparator,
-    minPrecision: precision[0],
-    maxPrecision: precision[1],
+    precision: [precision[0], precision[1]],
   })
 
   let number = symbolBehind
