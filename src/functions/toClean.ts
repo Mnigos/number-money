@@ -14,7 +14,7 @@ export function toClean(
     thousandSeparator = ',',
     precision = [2, 2],
   }: ToCleanConfig = defaultConfig
-) {
+): string {
   if (precision.length !== 2)
     throw new Error('`precision` property must got two elements')
 
@@ -30,6 +30,8 @@ export function toClean(
         fixedValue.slice(dotIndex + 1)
       : fixedValue + decimalMark
 
+  console.log(valueWithDotIndex)
+
   if (precision[0] > 0) {
     const numZeros =
       dotIndex > -1
@@ -37,16 +39,16 @@ export function toClean(
         : precision[0]
 
     for (let i = 0; i < numZeros; i++) valueWithDotIndex += '0'
-
-    const regexpDecimalMark = regexpEscape(decimalMark)
-    const thousandSeparatorRegexp = new RegExp(
-      `\\d(?=(\\d{3})+${regexpDecimalMark})`,
-      'g'
-    )
-    const trimRegexp = new RegExp(`${regexpDecimalMark}$`)
-
-    return valueWithDotIndex
-      .replace(thousandSeparatorRegexp, `$&${thousandSeparator}`)
-      .replace(trimRegexp, '')
   }
+
+  const regexpDecimalMark = regexpEscape(decimalMark)
+  const thousandSeparatorRegexp = new RegExp(
+    `\\d(?=(\\d{3})+${regexpDecimalMark})`,
+    'g'
+  )
+  const trimRegexp = new RegExp(`${regexpDecimalMark}$`)
+
+  return valueWithDotIndex
+    .replace(thousandSeparatorRegexp, `$&${thousandSeparator}`)
+    .replace(trimRegexp, '')
 }
