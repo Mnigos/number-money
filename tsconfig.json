@@ -7,10 +7,9 @@
     "esModuleInterop": true,
     "allowJs": true,
     "sourceMap": true,
-    "outDir": "dist",
+    "outDir": "./dist",
     "rootDir": "./src",
     "strict": true,
-    "noEmit": true,
     "experimentalDecorators": true,
     "baseUrl": "./",
     "paths": {
@@ -20,6 +19,5 @@
     "types": ["@types/node", "@types/jest"]
   },
   "include": ["src/**/*"],
-  "files": ["src/main.ts"],
   "exclude": ["node_modules", ".nuxt", "dist", "src/**/*.spec.ts"]
 }
