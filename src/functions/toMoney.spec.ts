@@ -1,4 +1,4 @@
-import { toMoney } from './main'
+import { toMoney } from './toMoney'
 
 describe('toMoney function', () => {
   it('should return formatted number', () => {

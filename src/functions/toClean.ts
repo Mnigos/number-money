@@ -1,5 +1,5 @@
-import { ToCleanConfig } from './interfaces/ToCleanConfig'
-import { regexpEscape } from './utils/regexpEscape'
+import { ToCleanConfig } from '../interfaces/ToCleanConfig'
+import { regexpEscape } from '../utils/regexpEscape'
 
 const defaultConfig: ToCleanConfig = {
   decimalMark: '.',
