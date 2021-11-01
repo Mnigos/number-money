@@ -1,4 +1,5 @@
 [![CI](https://github.com/Mnigos/number-money/actions/workflows/ci.yml/badge.svg)](https://github.com/Mnigos/number-money/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/Mnigos/number-money/branch/main/graph/badge.svg?token=wolZ3C83bL)](https://codecov.io/gh/Mnigos/number-money)
 ![LICENSE](https://img.shields.io/github/license/Mnigos/number-money.svg)
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
