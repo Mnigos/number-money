@@ -1,6 +1,6 @@
 {
-  "name": "number-money",
-  "version": "0.1.1",
+  "name": "@mnigos/number-money",
+  "version": "0.1.2",
   "description": "format number to money",
   "author": "Mnigos <makowskiigor@gmail.com>",
   "license": "MIT",
