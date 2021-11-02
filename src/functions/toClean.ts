@@ -30,8 +30,6 @@ export function toClean(
         fixedValue.slice(dotIndex + 1)
       : fixedValue + decimalMark
 
-  console.log(valueWithDotIndex)
-
   if (precision[0] > 0) {
     const numZeros =
       dotIndex > -1
