@@ -15,11 +15,12 @@
     "url": "git+https://github.com/Mnigos/number-money.git"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/",
+    "registry": "https://npm.pkg.github.com/@mnigos",
     "access": "public"
   },
   "scripts": {
     "prepare": "husky install",
+    "build": "tsc -d",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "lint:fix": "npm run lint -- --fix",
     "type-check": "tsc",
